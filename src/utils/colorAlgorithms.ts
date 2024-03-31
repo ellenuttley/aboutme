@@ -66,3 +66,14 @@ type RGB = {
 
     return rgbToHex(red, green, blue);
  };
+
+ export const secondaryAlgorithm2 = (whiteColor: string, secondaryColor1: string): string => { 
+    let white = hexToRgb(whiteColor);
+    let secondary1 = hexToRgb(secondaryColor1)
+
+    let red = white.red - secondary1.red;
+    let green = white.green - secondary1.green;
+    let blue = white.blue - secondary1.blue;
+
+    return rgbToHex(red, green, blue);
+  };
