@@ -77,3 +77,34 @@ type RGB = {
 
     return rgbToHex(red, green, blue);
   };
+
+  export const secondaryAlgorithm3 = (whiteColor: string, rgb: RGB): string => { 
+    
+    let white = hexToRgb(whiteColor);
+
+    // Create a color mapping array
+    let colorMapping = ['red', 'green', 'blue'];
+
+    // Sort the color mapping based on the values in the rgb object
+    colorMapping.sort((a, b) => rgb[b] - rgb[a]);
+
+    // Create a new object to hold the final result
+    let result: RGB = {red: 0, green: 0, blue: 0};
+
+    // Iterate over the sorted color mapping
+    for (let i = 0; i < colorMapping.length; i++) {
+      let color = colorMapping[i];
+      let valueStr = rgb[color].toString();
+
+      // If it's the first color (the largest), take the first digit
+      if (i === 0) {
+        result[color as keyof RGB] = Number(valueStr.slice(0, 1)) * 100;
+        console.log(result);
+      }
+
+      result[color as keyof RGB] += white[color] - rgb[color];
+    }
+
+    return rgbToHex(result.red, result.green, result.blue);
+
+   };
