@@ -7,7 +7,7 @@ type RGB = {
   [key: string]: number;
  };
 
-export const hexToRgb = (hex: string): RGB => { 
+ export const hexToRgb = (hex: string): RGB => { 
     let red = parseInt(hex.slice(1, 3), 16),
         green = parseInt(hex.slice(3, 5), 16),
         blue = parseInt(hex.slice(5, 7), 16);
@@ -15,11 +15,11 @@ export const hexToRgb = (hex: string): RGB => {
     return { red, green, blue };
  };
 
-export const rgbToHex = (r: number, g: number, b: number): string => { 
+ export const rgbToHex = (r: number, g: number, b: number): string => { 
     return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
  };
 
-export const whiteAlgorithm = (rgb: RGB): string => { 
+ export const whiteAlgorithm = (rgb: RGB): string => { 
     let lastDigits = [rgb.red, rgb.green, rgb.blue];
     for (let i = 0; i < lastDigits.length; i++) {
     lastDigits[i] = (lastDigits[i] % 10);
@@ -37,7 +37,7 @@ export const whiteAlgorithm = (rgb: RGB): string => {
     return rgbToHex(result.red, result.green, result.blue);
  };
 
-export const blackAlgorithm = (rgb: RGB): string => { 
+ export const blackAlgorithm = (rgb: RGB): string => { 
     let colorMapping = ['red', 'green', 'blue'];
     colorMapping.sort((a, b) => rgb[b] - rgb[a]);
     let result: RGB = {red: 0, green: 0, blue: 0};
@@ -57,4 +57,12 @@ export const blackAlgorithm = (rgb: RGB): string => {
     }
 
     return rgbToHex(result.red, result.green, result.blue);
+ };
+
+ export const secondaryAlgorithm1 = (rgb: RGB): string => { 
+    let red = Math.ceil(rgb.red / 2);
+    let green = Math.ceil(rgb.green / 2);
+    let blue = Math.ceil(rgb.blue / 2);
+
+    return rgbToHex(red, green, blue);
  };
