@@ -31,3 +31,19 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer components {
+  .button {
+    @apply border size-fit m-1 px-3 py-1 border-tBlack bg-tSecondary text-tWhite shadow-tBlack shadow-md rounded-lg font-lexend ;
+  }
+}
+
+.blackHeader {
+  color: theme('colors.tBlack');
+  text-shadow: -1px 0 theme('colors.tWhite'), 0 1px theme('colors.tWhite'), 1px 0 theme('colors.tWhite'), 0 -1px theme('colors.tWhite');
+}
+
+.whiteHeader {
+  color: theme('colors.tWhite');
+  text-shadow: -1px 0 theme('colors.tBlack'), 0 1px theme('colors.tBlack'), 1px 0 theme('colors.tBlack'), 0 -1px theme('colors.tBlack');
+}
