@@ -8,6 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        tPrimary: '#61087F',
+        tSecondary: '#8C56AE',
+        tTransition: '#CACBCC',
+        tWhite: '#F9F6FA',
+        tBlack: '#1B0C2C',
+      },
+      fontFamily: {
+        calistoga: ['var(--font-calistoga)'],
+        lexend: ['var(--font-lexend)'],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
