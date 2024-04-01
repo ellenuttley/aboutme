@@ -34,7 +34,7 @@ body {
 
 @layer components {
 	.button {
-		@apply border size-fit m-1 px-3 py-1 border-tBlack bg-tSecondary text-tWhite shadow-tBlack shadow-md rounded-lg font-lexend;
+		@apply border size-fit m-1 px-3 py-1 border-tPrimary bg-tSecondary whiteHeader shadow-tBlack shadow-md rounded-lg font-lexend;
 	}
 }
 
