@@ -72,7 +72,12 @@ function ColorPalette() {
     setPrimary(newColor);
     handleColorChange({ target: { value: newColor } } as ChangeEvent<HTMLInputElement>);
   };
-  
+
+  const handleSecondaryColorChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setSecondary(e.target.value);
+    let transition = transitionAlgorithm(hexToRgb(primaryColor), secondaryColor);
+    setTransition(transition);
+  };  
 
   const secondaryAlgorithm1 = (rgb: RGB): string => {
     let red = Math.ceil(rgb.red / 2);
@@ -151,8 +156,6 @@ function ColorPalette() {
   
     return rgbToHex(averageRed, averageGreen, averageBlue);
   };
-  
-
 
   const whiteAlgorithm = (rgb: RGB): string => {
     let lastDigits = [rgb.red, rgb.green, rgb.blue];
@@ -198,12 +201,12 @@ function ColorPalette() {
 
   return (
     <div className=" flex flex-row *:w-svw-[80%] *:h-24">
-          <button onClick={generateRandomPalette}>Generate Random Palette</button>
+      <button onClick={generateRandomPalette}>Generate Random Palette</button>
       <input type="color" value={primaryColor} onChange={handleColorChange}/>
-      <input type="color" value={transitionColor}  onChange={(e) => setTransition(e.target.value)}/>
-      <input type="color" value={secondaryColor}  onChange={(e) => setSecondary(e.target.value)}/>
-      <input type="color" value={whiteColor}  onChange={(e) => setWhite(e.target.value)}/>
-      <input type="color" value={blackColor}  onChange={(e) => setBlack(e.target.value)}/>
+      <input type="color" value={transitionColor}  disabled/>
+      <input type="color" value={secondaryColor}  onChange={handleSecondaryColorChange}/>
+      <input type="color" value={whiteColor} disabled/>
+      <input type="color" value={blackColor} disabled/>
       <button onClick={handleColorShuffle}>Change Colors</button>
     </div>
   );
