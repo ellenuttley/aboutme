@@ -16,13 +16,13 @@ export const HoverTextImpressive = () => {
 export const HoverTextAutism = () => {
   return (
     <div className="*:whiteHeader  cursor-pointeroverflow-x-visible group relative inline-block leading-normal before:absolute before:block ">
-      <p className="text-tPrimary relative  inline-block whitespace-break-spaces group-hover:hidden">
+      <p className="relative inline-block  whitespace-break-spaces text-tPrimary ">
         {" "}
         Autistic
       </p>
-      <p className="whiteHeader relative hidden  whitespace-break-spaces opacity-0 group-hover:inline-block group-hover:opacity-100">
+      <p className="relative hidden whitespace-break-spaces  text-tTransition opacity-0 group-hover:inline-block group-hover:opacity-100">
         {" "}
-        and that's a good thing
+        and that is a good thing
       </p>
     </div>
   );
