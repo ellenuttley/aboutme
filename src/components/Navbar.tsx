@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { FaHome, FaUser, FaBriefcase } from "react-icons/fa";
+import { FiHome, FiUserCheck, FiCode, FiPenTool, FiSun } from "react-icons/fi";
 
 const Navbar = () => {
   const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
@@ -23,7 +23,7 @@ const Navbar = () => {
           onMouseEnter={() => handleMouseEnter("home")}
           onMouseLeave={handleMouseLeave}
         >
-          <FaHome />
+          <FiHome size="33" />
           <span
             className={`sidebar-tooltip ${activeTooltip === "home" ? "scale-100" : "scale-0"}`}
           >
@@ -36,24 +36,38 @@ const Navbar = () => {
           onMouseEnter={() => handleMouseEnter("read-my-cv")}
           onMouseLeave={handleMouseLeave}
         >
-          <FaUser />
+          <FiUserCheck size="33" />
           <span
             className={`sidebar-tooltip ${activeTooltip === "read-my-cv" ? "scale-100" : "scale-0"}`}
           >
-            Read My CV
+            About Me
           </span>
         </a>
         <a
-          href="#see-my-work"
+          href="#my-code"
           className="sidebar-icon"
-          onMouseEnter={() => handleMouseEnter("see-my-work")}
+          onMouseEnter={() => handleMouseEnter("my-code")}
           onMouseLeave={handleMouseLeave}
         >
-          <FaBriefcase />
+          <FiCode size="33" />
           <span
-            className={`sidebar-tooltip ${activeTooltip === "see-my-work" ? "scale-100" : "scale-0"}`}
+            className={`sidebar-tooltip ${activeTooltip === "my-code" ? "scale-100" : "scale-0"}`}
           >
-            See My Work
+            My Code
+          </span>
+        </a>
+
+        <a
+          href="#my-design"
+          className="sidebar-icon"
+          onMouseEnter={() => handleMouseEnter("my-design")}
+          onMouseLeave={handleMouseLeave}
+        >
+          <FiPenTool size="33" />
+          <span
+            className={`sidebar-tooltip ${activeTooltip === "my-design" ? "scale-100" : "scale-0"}`}
+          >
+            My Design
           </span>
         </a>
       </div>
