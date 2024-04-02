@@ -55,11 +55,11 @@
 
 @layer components {
   .box {
-    @apply rounded-md bg-tWhite p-2 px-2 shadow-sm shadow-tBlack;
+    @apply container relative m-auto size-auto content-center items-center justify-items-center rounded-lg border border-tTransition bg-tWhite p-5 text-left shadow-sm shadow-tBlack;
   }
 
   .button {
-    @apply whiteHeader m-1 size-fit rounded-lg border border-tBlack/30 bg-tSecondary px-3 py-1 font-calistoga tracking-wider shadow-sm hover:shadow-tBlack hover:shadow-md shadow-tBlack hover:skew-y-1;
+    @apply whiteHeader m-1 size-fit rounded-lg border border-tBlack/30 bg-tSecondary px-3 py-1 font-calistoga text-xl tracking-wide shadow-sm shadow-tBlack hover:skew-y-1 hover:shadow-md hover:shadow-tBlack;
   }
 
   .page {
@@ -75,11 +75,15 @@
   }
 
   .colour {
-	@apply  flex flex-row gap-4 p-1 *:min-h-12 *:place-content-center *:items-center font-medium font-lexend border border-tTransition/20 hover:shadow-tBlack hover:shadow-inner shadow-tBlack shadow-sm 
+    @apply flex flex-row gap-4 border cursor-pointer border-tTransition/20 p-1 font-lexend text-xl font-medium shadow-sm shadow-tBlack *:min-h-12 *:place-content-center *:items-center hover:shadow-inner hover:shadow-tBlack;
+  }
+
+  .quotebox {
+    @apply  bg-tTransition p-2 shadow-tBlack/20 rounded-lg shadow-xl  border-2 border-tGrey;
   }
 
   .sidebar {
-    @apply fixed left-1 right-1 top-1 z-10 flex w-dvw flex-row justify-evenly rounded-md border-2 border-solid bg-tWhite pb-2 pt-2 
+    @apply fixed left-1 right-1 top-1 z-10 flex w-dvw flex-row justify-evenly rounded-md border border-spacing-x-1 bg-tWhite pb-2 pt-2 
         opacity-10 shadow-md shadow-tPrimary
 
         hover:opacity-100 lg:bottom-auto lg:left-7 lg:right-auto lg:top-2/4 lg:mx-auto lg:min-w-fit lg:-translate-y-2/4 lg:transform lg:flex-col lg:gap-5 
@@ -130,6 +134,14 @@
     0.5px 0 theme("colors.tBlack"),
     0 -0.5px theme("colors.tBlack");
 }
+
+
+.embossed {
+  color: theme("colors.tTransition");
+  text-shadow: 1px -1px theme("colors.tBlack");
+}
+
+
 
 html {
   scroll-behavior: smooth;

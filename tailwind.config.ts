@@ -14,6 +14,7 @@ const config: Config = {
         tTransition: '#CACBCC',
         tWhite: '#F9F6FA',
         tBlack: '#1B0C2C',
+        tGrey: '#333333',
       },
       fontFamily: {
         calistoga: ['var(--font-calistoga)'],
