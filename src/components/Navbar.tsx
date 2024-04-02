@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
 import { FiHome, FiUserCheck, FiCode, FiPenTool, FiSun } from "react-icons/fi";
+import { SiTailwindcss } from "react-icons/si";
+
 
 const Navbar = () => {
   const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
@@ -41,6 +43,19 @@ const Navbar = () => {
             className={`sidebar-tooltip ${activeTooltip === "read-my-cv" ? "scale-100" : "scale-0"}`}
           >
             About Me
+          </span>
+        </a>
+        <a
+          href="#about-you"
+          className="sidebar-icon"
+          onMouseEnter={() => handleMouseEnter("about-you")}
+          onMouseLeave={handleMouseLeave}
+        >
+          <SiTailwindcss size="33" />
+          <span
+            className={`sidebar-tooltip ${activeTooltip === "about-you" ? "scale-100" : "scale-0"}`}
+          >
+            About You
           </span>
         </a>
         <a

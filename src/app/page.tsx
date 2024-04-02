@@ -1,4 +1,5 @@
 import Image from "next/image";
+import AboutYou from "./AboutYou";
 // import Navbar from "@/components/Navbar";
 import AboutMe from "@/app/AboutMe";
 import { HoverTextImpressive, HoverTextAutism } from "@/components/HoverText";
@@ -8,15 +9,12 @@ export default function Home() {
     <main className="main">
       <section id="home">
         <div className="mb-3 gap-2">
-          <h2
-            className="page size-fit first-letter:float-left 
-  first-letter:text-5xl "
-          >
+          <h2 className="page size-fit  first-letter:float-left  first-letter:text-5xl ">
             Greetings, Tailwind hiring personnel!
           </h2>
         </div>
 
-        <div className="page ">
+        <div className="page text-left">
           <h2>
             Get ready for an extremely...
             <HoverTextImpressive />
@@ -28,6 +26,9 @@ export default function Home() {
 
       <section id="about-me" className="section ">
         <AboutMe />
+      </section>
+      <section id="about-you" className="section ">
+        <AboutYou />
       </section>
       <section id="my-code" className="h-screen bg-red-500">
         <h1 className="mt-20 text-4xl text-white">See My Work</h1>
