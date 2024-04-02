@@ -24,7 +24,6 @@ export default function Home() {
           application for the role of Design Engineer
         </h2>
       </div>
-      {/* <Navbar /> */}
       {/* <ColorPalette /> */}
 
       <h1 className="blackHeader page text-5xl text-tPrimary hover:border-transparent hover:bg-transparent hover:shadow-transparent">
