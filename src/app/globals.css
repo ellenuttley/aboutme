@@ -28,7 +28,7 @@
 
 @layer base {
   body {
-    @apply bg-tSecondary;
+    @apply bg-tSecondary antialiased;
   }
   main {
     @apply font-lexend font-light;
@@ -54,25 +54,41 @@
 }
 
 @layer components {
+  .box {
+    @apply rounded-md bg-tWhite p-2 px-2 shadow-sm shadow-tBlack;
+  }
+
   .button {
-    @apply whiteHeader m-1 size-fit rounded-lg border border-tPrimary bg-tSecondary px-3 py-1 font-lexend shadow-md shadow-tBlack;
+    @apply whiteHeader m-1 size-fit rounded-lg border border-tBlack/30 bg-tSecondary px-3 py-1 font-calistoga tracking-wider shadow-sm hover:shadow-tBlack hover:shadow-md shadow-tBlack hover:skew-y-1;
   }
 
   .page {
-    @apply container relative m-auto h-auto w-auto flex-col rounded-lg border border-tTransition bg-tWhite p-5 shadow-sm shadow-tBlack;
+    @apply container relative m-auto size-auto flex-col content-center items-center justify-items-center rounded-lg border border-tTransition bg-tWhite p-5 text-center shadow-sm shadow-tBlack;
   }
 
-    .sidebar {
-        @apply fixed flex flex-row border-solid border-2 rounded-md shadow-md z-10 top-1 right-1 left-1 justify-evenly w-dvw pt-2 pb-2 
-        bg-tWhite shadow-tPrimary opacity-10
+  .section {
+    @apply container relative content-center items-center justify-items-start;
+  }
 
-        lg:top-2/4 lg:left-7 lg:right-auto lg:bottom-auto lg:min-w-fit lg:flex-col lg:gap-5 lg:p-3 lg:mx-auto lg:pt-5 lg:pb-5 
-        lg:transform lg:-translate-y-2/4
+  .main {
+    @apply flex min-h-screen flex-col items-center overflow-auto text-pretty p-2 text-tBlack *:mt-4 md:p-8;
+  }
 
-		hover:opacity-100
+  .colour {
+	@apply  flex flex-row gap-4 p-1 *:min-h-12 *:place-content-center *:items-center font-medium font-lexend border border-tTransition/20 hover:shadow-tBlack hover:shadow-inner shadow-tBlack shadow-sm 
+  }
+
+  .sidebar {
+    @apply fixed left-1 right-1 top-1 z-10 flex w-dvw flex-row justify-evenly rounded-md border-2 border-solid bg-tWhite pb-2 pt-2 
+        opacity-10 shadow-md shadow-tPrimary
+
+        hover:opacity-100 lg:bottom-auto lg:left-7 lg:right-auto lg:top-2/4 lg:mx-auto lg:min-w-fit lg:-translate-y-2/4 lg:transform lg:flex-col lg:gap-5 
+        lg:p-3 lg:pb-5
+
+		lg:pt-5
         
-        dark:bg-tPrimary dark:border-tPrimary dark:shadow-tSecondary;
-      }
+        dark:border-tPrimary dark:bg-tPrimary dark:shadow-tSecondary;
+  }
 
   .sidebar-icon {
     @apply relative z-10 box-border flex h-max w-max min-w-max cursor-pointer items-center justify-center
@@ -87,8 +103,8 @@
   }
 
   .sidebar-tooltip {
-    @apply absolute top-11 z-10 m-2 w-auto min-w-max origin-top scale-0 rounded-md bg-tPrimary/95 text-tWhite font-lexend font-light
-    p-2
+    @apply absolute top-11 z-10 m-2 w-auto min-w-max origin-top scale-0 rounded-md bg-tPrimary/95 p-2 font-lexend font-light
+    text-tWhite
     shadow-md transition-all duration-100
 
     lg:left-14 lg:top-auto lg:origin-left
@@ -100,19 +116,19 @@
 .blackHeader {
   color: theme("colors.tBlack");
   text-shadow:
-    -1px 0 theme("colors.tWhite"),
-    0 1px theme("colors.tWhite"),
-    1px 0 theme("colors.tWhite"),
-    0 -1px theme("colors.tWhite");
+    -0.5px 0 theme("colors.tWhite"),
+    0 0.5px theme("colors.tWhite"),
+    0.5px 0 theme("colors.tWhite"),
+    0 -0.5px theme("colors.tWhite");
 }
 
 .whiteHeader {
   color: theme("colors.tWhite");
   text-shadow:
-    -1px 0 theme("colors.tBlack"),
-    0 1px theme("colors.tBlack"),
-    1px 0 theme("colors.tBlack"),
-    0 -1px theme("colors.tBlack");
+    -0.5px 0 theme("colors.tBlack"),
+    0 0.5px theme("colors.tBlack"),
+    0.5px 0 theme("colors.tBlack"),
+    0 -0.5px theme("colors.tBlack");
 }
 
 html {
