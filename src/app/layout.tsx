@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Calistoga, Lexend } from "next/font/google";
 import ClientNavbar from "@/components/ClientNavbar";
+import Footer from "@/components/Footer";
 
 import "./globals.css";
 
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body className={`${calistoga.variable} ${lexend.variable}`}>
         <ClientNavbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
