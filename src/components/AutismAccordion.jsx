@@ -12,7 +12,7 @@ const AutismAccordion = () => {
   };
 
   return (
-    <div className="box col-span-3 w-dvw">
+    <div className="box col-span-3 w-full">
       <h2
         onClick={toggleAccordion}
         className="flex cursor-pointer items-center justify-between"
@@ -31,7 +31,7 @@ const AutismAccordion = () => {
           <ul>
             <li>
               I am an extremely fast learner, and fanatically self taught. As
-              soon as I am curious about something, I have to know how it works
+              soon as I am curious about something, I have to know how it works.
             </li>
             <li>
               I have a keen eye for predicting user behaviours, and I love to
