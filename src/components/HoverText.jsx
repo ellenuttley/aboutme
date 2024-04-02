@@ -15,20 +15,15 @@ export const HoverTextImpressive = () => {
 
 export const HoverTextAutism = () => {
   return (
-    //     <div className="*:whiteHeader group static  flex cursor-pointer flex-col whitespace-break-spaces leading-normal before:absolute before:-inset-1 before:block group-hover:absolute">
-    //       <span className="page">
-    //         I have
-    //         <p className=" relative inline-block whitespace-break-spaces text-tSecondary">
-    //           {" "}
-    //           Autism
-    //         </p>
-    //       </span>
-    //       <p className="whiteHeader relative hidden text-right text-base opacity-0 group-hover:inline-block group-hover:flex-grow group-hover:opacity-100">
-    //         {" "}
-    //         ... and that's a good thing
-    //       </p>
-    //     </div>
-    //   );
-    <></>
+    <div className="*:whiteHeader  cursor-pointeroverflow-x-visible group relative inline-block leading-normal before:absolute before:block ">
+      <p className="text-tPrimary relative  inline-block whitespace-break-spaces group-hover:hidden">
+        {" "}
+        Autistic
+      </p>
+      <p className="whiteHeader relative hidden  whitespace-break-spaces opacity-0 group-hover:inline-block group-hover:opacity-100">
+        {" "}
+        and that's a good thing
+      </p>
+    </div>
   );
 };

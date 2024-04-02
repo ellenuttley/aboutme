@@ -31,7 +31,7 @@ const Navbar = () => {
           </span>
         </a>
         <a
-          href="#read-my-cv"
+          href="#about-me"
           className="sidebar-icon"
           onMouseEnter={() => handleMouseEnter("read-my-cv")}
           onMouseLeave={handleMouseLeave}
