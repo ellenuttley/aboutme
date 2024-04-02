@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { FiRefreshCcw } from "react-icons/fi";
 import { useState, ChangeEvent } from "react";
 
 // Define a type for the RGB color
@@ -21,7 +22,7 @@ const getRandomColor = (): string => {
 };
 
 function ColorPalette() {
-  const [primaryColor, setPrimary] = useState<string>(getRandomColor());
+  const [primaryColor, setPrimary] = useState<string>("#DD6031");
   const [whiteColor, setWhite] = useState<string>("#FFFFFF");
   const [blackColor, setBlack] = useState<string>("#333333");
   const [secondaryColor, setSecondary] = useState<string>("#6F3019");
@@ -215,41 +216,50 @@ function ColorPalette() {
     } as ChangeEvent<HTMLInputElement>);
   };
 
+  const [showNotification, setShowNotification] = useState(false);
+  const notification = "Hex code copied to clipboard!";
+
+    // const [lastClickedColor, setLastClickedColor] = useState("");
+
+  const copyToClipboard = (
+    hexCode: string,
+    event: React.MouseEvent<HTMLLabelElement>,
+  ) => {
+    navigator.clipboard.writeText(hexCode);
+    // setLastClickedColor(hexCode);
+    setShowNotification(true);
+    setTimeout(() => setShowNotification(false), 2000); // Hide notification after 2 seconds
+  };
+
   return (
     <>
-      <div className="w-dvh blackHeader *:size-fill flex flex-col gap-1 rounded-lg border border-tBlack bg-tWhite p-2 font-lexend text-lg uppercase shadow-sm shadow-tBlack *:place-content-center *:items-center *:justify-evenly  *:rounded-lg *:text-right">
-        <button className="button self-center" onClick={generateRandomPalette}>
-          Generate Random Palette
-        </button>
-
+      <div className="w-dvh blackHeader flex flex-col gap-1 rounded-xl border border-tBlack bg-tWhite p-1 md:p-3 font-lexend text-lg font-medium uppercase shadow-sm shadow-tBlack *:place-content-center *:items-center  *:justify-evenly *:rounded-lg ">
         <div className=" flex gap-1 *:place-content-center">
-          {" "}
-          <label className="text-balance normal-case">
-            Choose Primary Colour:
-          </label>
           <input
             type="color"
             value={primaryColor}
             onChange={handleColorChange}
             aria-label="Primary Color"
+            className="h-12 flex-grow cursor-pointer rounded-lg hover:border"
           />
+          <button className="button h-10 text-xl" onClick={handleColorShuffle}>
+            <FiRefreshCcw />
+          </button>
         </div>
-        <div
-          style={{ backgroundColor: primaryColor }}
-          className="*:size-fill flex flex-row gap-3 p-1 px-3 text-right *:min-h-12 *:place-content-center *:items-center"
-        >
-          <label>{primaryColor}</label>
+        <div style={{ backgroundColor: primaryColor }} className="colour">
+          <label onClick={(event) => copyToClipboard(primaryColor, event)}>
+            {primaryColor}
+
+          </label>
         </div>
 
-        <div
-          style={{ backgroundColor: transitionColor }}
-          className="*:size-fill flex flex-row gap-4 p-1 *:min-h-12 *:place-content-center "
-        >
-          {/* <input type="color" value={transitionColor}  disabled aria-label="Transition Color"/> */}
-          <label className="text-right">{transitionColor}</label>
+        <div style={{ backgroundColor: transitionColor }} className="colour">
+          <label onClick={(event) => copyToClipboard(transitionColor, event)}>
+            {transitionColor}
+          </label>
         </div>
 
-        <div className=" flex gap-1 *:place-content-center">
+        {/* <div className=" flex gap-1 *:place-content-center">
           <label className="text-balance normal-case">
             Change Secondary Color:
           </label>
@@ -259,33 +269,36 @@ function ColorPalette() {
             onChange={handleSecondaryColorChange}
             aria-label="Secondary Color"
           />
+        </div> */}
+
+        <div style={{ backgroundColor: secondaryColor }} className="colour">
+          <label onClick={(event) => copyToClipboard(secondaryColor, event)}>
+            {secondaryColor}
+          </label>
         </div>
 
-        <div
-          style={{ backgroundColor: secondaryColor }}
-          className="*:size-fill flex flex-row gap-4 p-1 *:min-h-12 *:place-content-center *:items-center"
+        <div style={{ backgroundColor: whiteColor }} className="colour">
+          <label onClick={(event) => copyToClipboard(whiteColor, event)}>
+            {whiteColor}
+          </label>
+        </div>
+
+        <div style={{ backgroundColor: blackColor }} className="colour shadow-tWhite">
+          <label onClick={(event) => copyToClipboard(blackColor, event)}>
+            {blackColor}
+          </label>
+        </div>
+
+        <button
+          className="button self-center text-center w-full"
+          onClick={generateRandomPalette}
         >
-          <label>{secondaryColor}</label>
-        </div>
-
-        <div
-          style={{ backgroundColor: whiteColor }}
-          className="*:size-fill flex flex-row gap-4 p-1 *:min-h-12 *:place-content-center *:items-center"
-        >
-          {/* <input type="color" value={whiteColor} disabled aria-label="White Color"/> */}
-          <label>{whiteColor}</label>
-        </div>
-
-        <div
-          style={{ backgroundColor: blackColor }}
-          className="*:size-fill flex flex-row gap-4 p-1 *:min-h-12 *:place-content-center *:items-center"
-        >
-          {/* <input type="color" value={blackColor} disabled aria-label="Black Color" className="border-black"/> */}
-          <label>{blackColor}</label>
-        </div>
-
-        <button className="button" onClick={handleColorShuffle}>
-          Shuffle
+          Generate
+        {showNotification && (
+          <div className="absolute left-1 font-lexend font-light rounded bg-tTransition px-2 py-1 text-center text-sm normal-case text-tBlack shadow-md">
+            Hex code copied to clipboard
+          </div>
+        )}
         </button>
       </div>
     </>
