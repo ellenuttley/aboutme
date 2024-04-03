@@ -1,15 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import { HoverTextAutism } from "@/components/HoverText";
-import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
-import QuoteBox from "@/components/QuoteBox";
 import AutismAccordion from "@/components/AutismAccordion";
-import ColorPalette from "@/components/ColourPalette";
 
 const AboutMe = () => {
   return (
     <div className="grid grid-cols-3 gap-2 gap-y-5">
-      <div className="col-span-1">
+      <div className="col-span-1 place-content-center">
         <figure>
           <Image
             className="box rounded-lg border border-tTransition p-1 shadow-sm shadow-tBlack"
@@ -23,20 +19,20 @@ const AboutMe = () => {
           </figcaption>
         </figure>
       </div>
-      <div className="box col-span-2 text-left ">
+      <div className="box col-span-2 h-full place-content-center text-left pt-2 ">
         <h1>I am Ellen</h1>
-        <div className="flex text-left *:space-y-2">
+        <div className="flex text-left *:space-y-2 mt-1">
           <ul>
             <li>
               I started coding when I was 13, by designing and creating MySpace
               profiles
             </li>
             <li>But I did not know what HTML was until I was 30</li>
+            <li>I was the highest scoring graduate in my CFGDegree* cohort</li>
           </ul>
         </div>
       </div>
       <AutismAccordion />
-
     </div>
   );
 };
