@@ -79,19 +79,23 @@
   }
 
   .quotebox-wrapper {
-    @apply rounded-lg border-2 border-tGrey bg-tTransition p-2  shadow-xl shadow-tBlack/20 flex flex-row place-items-center justify-evenly rounded-e-full rounded-s-full;
+    @apply rounded-lg overscroll-contain size-fit border-l-4 border-r-4 border-tGrey/30 bg-tTransition p-2  shadow-xl shadow-tBlack/20 flex flex-row place-items-center justify-evenly rounded-e-full rounded-s-full place-self-center;
   }
 
   .quotebox-icon {
-    @apply rounded-full border-2 border-tGrey bg-tSecondary p-0.5 text-4xl text-tBlack shadow-inner shadow-tGrey/80;
+    @apply rounded-full size-auto border border-tGrey/50 bg-tSecondary p-0.5 text-3xl md:text-4xl text-tGrey/70 shadow-inner shadow-tGrey/80;
   }
 
   .quotebox {
-    @apply flex flex-grow place-items-center justify-evenly px-1 text-center font-calistoga text-sm max-md:text-base lg:text-xl;
+    @apply flex flex-grow place-items-center justify-evenly px-3 text-center font-calistoga text-base md:text-xl lg:text-3xl;
+  }
+
+  .reviewbox {
+    @apply rounded-lg border-s border-e border-tGrey/30 p-3  shadow-xl shadow-tBlack/20 bg-tWhite/90 w-[70%];
   }
 
   .titlebox-wrapper {
-    @apply border-2 border-tGrey bg-tTransition p-2  shadow-xl shadow-tBlack/20 flex flex-row place-items-center justify-evenly rounded-tl-xl rounded-tr-xl;
+    @apply rounded-lg border-s border-e border-tGrey/30 p-2 shadow-xl shadow-tBlack/20 bg-tWhite bg-blend-hue ;
   }
 
   .titlebox-icon {
@@ -206,6 +210,11 @@
 .embossed {
   color: theme("colors.tTransition");
   text-shadow: 1px -1px theme("colors.tBlack");
+}
+
+.reviewStar {
+  color: theme("colors.tWhite");
+  text-shadow: 2px -2px theme("colors.tBlack");
 }
 
 html {
