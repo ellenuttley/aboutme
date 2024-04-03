@@ -5,6 +5,8 @@ import QuoteBox from "@/components/QuoteBox";
 import TitleBox from "@/components/TitleBox";
 import ColorPalette from "@/components/ColourPalette";
 import { FiGithub } from "react-icons/fi";
+import MyComponents from "@/components/MyComponents";
+
 
 const AboutYou = () => {
     const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
@@ -18,9 +20,9 @@ const AboutYou = () => {
   };
 
   return (
-    <div className="grid grid-cols-3 gap-2 gap-y-5">
+    <div className="grid grid-cols-3 gap-2 gap-y-5 place-items-center">
       <div className="col-span-3">
-        <h1 className="embossed pt-2 text-center text-3xl text-tTransition">
+        <h1 className="embossed pt-2 text-center text-tTransition">
           You want someone who can...
         </h1>
       </div>
@@ -39,7 +41,7 @@ const AboutYou = () => {
           >
             <FiGithub size="33" />
             <span
-              className={`sidebar-tooltip text-sx -translate-x-5 ${activeTooltip === "github" ? "scale-100" : "scale-0"}`}
+              className={`sidebar-tooltip origin-left -translate-x-full translate-y-10 text-sx ${activeTooltip === "github" ? "scale-100" : "scale-0"}`}
             >
               View on GitHub
             </span>
@@ -116,7 +118,9 @@ const AboutYou = () => {
       <TitleBox title="Create new components and templates" />
 
       <div className="col-span-2"></div>
-      <div className="col-span-2"></div>
+      <div className="col-span-3">
+        {/* <MyComponents /> */}
+      </div>
     </div>
   );
 };
