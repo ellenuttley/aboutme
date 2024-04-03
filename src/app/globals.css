@@ -90,8 +90,16 @@
     @apply flex flex-grow place-items-center justify-evenly px-1 text-center font-calistoga text-sm max-md:text-base lg:text-xl;
   }
 
-    .titlebox {
-    @apply rounded-lg border-2 border-tGrey bg-tTransition p-2  shadow-xl shadow-tBlack/20;
+  .titlebox-wrapper {
+    @apply border-2 border-tGrey bg-tTransition p-2  shadow-xl shadow-tBlack/20 flex flex-row place-items-center justify-evenly rounded-tl-xl rounded-tr-xl;
+  }
+
+  .titlebox-icon {
+    @apply rounded-full border-2 border-tGrey bg-tSecondary p-0.5 text-4xl text-tBlack shadow-inner shadow-tGrey/80;
+  }
+
+  .titlebox {
+    @apply flex flex-grow p-2 place-items-center justify-evenly px-1 text-center font-calistoga text-sm max-md:text-base lg:text-xl;
   }
 
     .listbox {
