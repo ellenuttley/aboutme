@@ -78,8 +78,24 @@
     @apply flex cursor-pointer flex-row gap-1 border border-tTransition/20 p-1 font-lexend text-sm font-medium shadow-sm shadow-tBlack *:min-h-8 *:place-content-center *:items-center  hover:shadow-inner hover:shadow-tBlack md:text-xl md:*:min-h-12 md:gap-4;
   }
 
+  .quotebox-wrapper {
+    @apply rounded-lg border-2 border-tGrey bg-tTransition p-2  shadow-xl shadow-tBlack/20 flex flex-row place-items-center justify-evenly rounded-e-full rounded-s-full;
+  }
+
+  .quotebox-icon {
+    @apply rounded-full border-2 border-tGrey bg-tSecondary p-0.5 text-4xl text-tBlack shadow-inner shadow-tGrey/80;
+  }
+
   .quotebox {
+    @apply flex flex-grow place-items-center justify-evenly px-1 text-center font-calistoga text-sm max-md:text-base lg:text-xl;
+  }
+
+    .titlebox {
     @apply rounded-lg border-2 border-tGrey bg-tTransition p-2  shadow-xl shadow-tBlack/20;
+  }
+
+    .listbox {
+    @apply rounded-lg border-s border-e border-tGrey/30 p-2  shadow-xl shadow-tBlack/20;
   }
 
   .sidebar {
