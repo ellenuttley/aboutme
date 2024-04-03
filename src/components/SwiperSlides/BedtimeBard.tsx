@@ -86,7 +86,7 @@ const BedtimeBard = () => {
         href="https://www.canva.com/design/DAFiqI0neAQ/RlNIIqjLNbFkPRyxAojOdQ/view?utm_content=DAFiqI0neAQ&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
         target="#"
         rel="noopener"
-        className="shadow-bardBlack relative block h-auto w-full rounded-xl shadow-sm"
+        className="shadow-bardBlack relative block h-auto w-full rounded-xl shadow-sm touch-pinch-zoom"
         style={{
           paddingTop: "56.2500%",
           paddingBottom: "0",
