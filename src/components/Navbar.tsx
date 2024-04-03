@@ -35,12 +35,12 @@ const Navbar = () => {
         <a
           href="#about-me"
           className="sidebar-icon"
-          onMouseEnter={() => handleMouseEnter("read-my-cv")}
+          onMouseEnter={() => handleMouseEnter("about-me")}
           onMouseLeave={handleMouseLeave}
         >
           <FiUserCheck size="33" />
           <span
-            className={`sidebar-tooltip ${activeTooltip === "read-my-cv" ? "scale-100" : "scale-0"}`}
+            className={`sidebar-tooltip ${activeTooltip === "about-me" ? "scale-100" : "scale-0"}`}
           >
             About Me
           </span>
