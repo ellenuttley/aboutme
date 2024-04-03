@@ -55,7 +55,7 @@
 
 @layer components {
   .box {
-    @apply container m-auto rounded-lg border border-tTransition bg-tWhite p-5 text-left shadow-sm shadow-tBlack;
+    @apply container m-auto rounded-lg border border-tTransition bg-tWhite p-4 md:p-5 text-left shadow-sm shadow-tBlack;
   }
 
   .button {
@@ -71,7 +71,7 @@
   }
 
   .main {
-    @apply flex min-h-screen flex-col items-center overflow-auto text-pretty p-2 text-tBlack *:mt-4 md:p-8;
+    @apply flex min-h-screen flex-col items-center text-pretty p-2 text-tBlack *:mt-4 md:p-8;
   }
 
   .colour {
@@ -83,7 +83,7 @@
   }
 
   .sidebar {
-    @apply fixed left-1 right-1 top-1 z-10 flex w-fit border-spacing-x-1 flex-row justify-evenly rounded-md border bg-tWhite pb-2 pt-2 
+    @apply fixed left-1 max-lg:w-dvw right-1 top-1 z-10 flex w-fit border-spacing-x-1 flex-row justify-evenly rounded-md border bg-tWhite pb-2 pt-2 
         opacity-10 shadow-md shadow-tPrimary
 
         hover:opacity-100 lg:bottom-auto lg:left-7 lg:right-auto lg:top-2/4 lg:mx-auto lg:min-w-fit lg:-translate-y-2/4 lg:transform lg:flex-col lg:gap-5 
