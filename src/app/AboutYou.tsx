@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import QuoteBox from "@/components/QuoteBox";
+import TitleBox from "@/components/TitleBox";
 import ColorPalette from "@/components/ColourPalette";
 import { FiGithub } from "react-icons/fi";
 
@@ -75,6 +76,12 @@ const AboutYou = () => {
         During the CFG App Development Masters, I got 100% on the documentation
         I wrote for our project, PetItDone :
       </p>
+
+      <QuoteBox quote="Enhance our documentation with visual demos" />
+      <div className="box">
+        add the bedtime bard and petitdone presentations
+      </div>
+
       <QuoteBox quote="Teach and inspire our audience" />
       <p>
         In a previous lifetime, when I worked in call center management, I
@@ -104,7 +111,9 @@ const AboutYou = () => {
           impace simplest tweaks to make the biggest impact.
         </p>
       </div>
-      <QuoteBox quote="Create a tool for designing color palettes" />
+
+      <QuoteBox quote="Create new components and templates" />
+      <TitleBox title="Create new components and templates" />
 
       <div className="col-span-2"></div>
       <div className="col-span-2"></div>
