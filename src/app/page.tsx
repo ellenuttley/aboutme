@@ -1,6 +1,8 @@
 import Image from "next/image";
 import AboutYou from "./AboutYou";
 // import Navbar from "@/components/Navbar";
+import MyCode from "@/app/MyCode";
+import MyDesign from "@/app/MyDesign";
 import AboutMe from "@/app/AboutMe";
 import { HoverTextImpressive, HoverTextAutism } from "@/components/HoverText";
 
@@ -9,7 +11,7 @@ export default function Home() {
     <main className="main">
       <section id="home">
         <div className="mb-3 gap-2">
-          <h2 className="page size-fit  first-letter:float-left  first-letter:text-5xl ">
+          <h2 className="box size-fit  first-letter:float-left  first-letter:text-5xl ">
             Greetings, Tailwind hiring personnel!
           </h2>
         </div>
@@ -30,13 +32,13 @@ export default function Home() {
       <section id="about-you" className="section ">
         <AboutYou />
       </section>
-      <section id="my-code" className="h-screen bg-red-500">
-        <h1 className="mt-20 text-4xl text-white">See My Work</h1>
-        {/* Work content goes here */}
+      <section id="my-code" className="section">
+        <h1>I love code</h1>
+        <MyCode />
       </section>
-      <section id="my-design" className="h-screen bg-yellow-500">
-        <h1 className="mt-20 text-4xl text-white">I love design</h1>
-        {/* Content for the 'I love design' section goes here */}
+      <section id="my-design" className="section">
+        <h1> I love design</h1>
+        <MyDesign />
       </section>
 
       <h1>
