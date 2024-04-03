@@ -19,6 +19,8 @@ const config: Config = {
       fontFamily: {
         calistoga: ['var(--font-calistoga)'],
         lexend: ['var(--font-lexend)'],
+        solway: ['var(--font-solway)'],
+        bungee: ['var(--font-bungee)'],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
