@@ -4,7 +4,6 @@ import React from "react";
 import { FiRefreshCcw } from "react-icons/fi";
 import { useState, ChangeEvent } from "react";
 
-// Define a type for the RGB color
 type RGB = {
   red: number;
   green: number;
@@ -28,7 +27,6 @@ function ColorPalette() {
   const [secondaryColor, setSecondary] = useState<string>("#6F3019");
   const [transitionColor, setTransition] = useState<string>("#8FC9DD");
 
-  // Function to convert hex color to RGB
   const hexToRgb = (hex: string): RGB => {
     let red = parseInt(hex.slice(1, 3), 16),
       green = parseInt(hex.slice(3, 5), 16),
@@ -37,7 +35,6 @@ function ColorPalette() {
     return { red, green, blue };
   };
 
-  // Function to convert RGB code back to hex
   const rgbToHex = (r: number, g: number, b: number): string => {
     return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
   };
@@ -76,14 +73,14 @@ function ColorPalette() {
     } as ChangeEvent<HTMLInputElement>);
   };
 
-  const handleSecondaryColorChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setSecondary(e.target.value);
-    let transition = transitionAlgorithm(
-      hexToRgb(primaryColor),
-      secondaryColor,
-    );
-    setTransition(transition);
-  };
+  // const handleSecondaryColorChange = (e: ChangeEvent<HTMLInputElement>) => {
+  //   setSecondary(e.target.value);
+  //   let transition = transitionAlgorithm(
+  //     hexToRgb(primaryColor),
+  //     secondaryColor,
+  //   );
+  //   setTransition(transition);
+  // };
 
   const secondaryAlgorithm1 = (rgb: RGB): string => {
     let red = Math.ceil(rgb.red / 2);
@@ -217,23 +214,19 @@ function ColorPalette() {
   };
 
   const [showNotification, setShowNotification] = useState(false);
-  const notification = "Hex code copied to clipboard!";
-
-    // const [lastClickedColor, setLastClickedColor] = useState("");
 
   const copyToClipboard = (
     hexCode: string,
     event: React.MouseEvent<HTMLLabelElement>,
   ) => {
     navigator.clipboard.writeText(hexCode);
-    // setLastClickedColor(hexCode);
     setShowNotification(true);
-    setTimeout(() => setShowNotification(false), 2000); // Hide notification after 2 seconds
+    setTimeout(() => setShowNotification(false), 2000); 
   };
 
   return (
     <>
-      <div className="w-dvh blackHeader flex flex-col gap-1 rounded-xl border border-tBlack bg-tWhite p-1 md:p-3 font-lexend text-lg font-medium uppercase shadow-sm shadow-tBlack *:place-content-center *:items-center  *:justify-evenly *:rounded-lg ">
+      <div className="w-dvh blackHeader flex flex-col gap-1 rounded-xl bg-tWhite p-1 md:p-3 font-lexend text-lg font-medium uppercase *:place-content-center *:items-center  *:justify-evenly *:rounded-lg ">
         <div className=" flex gap-1 *:place-content-center">
           <input
             type="color"
@@ -293,9 +286,9 @@ function ColorPalette() {
           className="button self-center text-center w-full"
           onClick={generateRandomPalette}
         >
-          Generate
+          Random
         {showNotification && (
-          <div className="absolute left-1 font-lexend font-light rounded bg-tTransition px-2 py-1 text-center text-sm normal-case text-tBlack shadow-md">
+          <div className="absolute left-1 font-lexend font-extralight rounded bg-t px-2 py-1 text-center text-sm normal-case text-tWhite bg-tPrimary shadow-md">
             Hex code copied to clipboard
           </div>
         )}
