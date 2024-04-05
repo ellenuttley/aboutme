@@ -12,7 +12,7 @@ const AutismAccordion = () => {
   };
 
   return (
-    <div className="box col-span-3 w-full">
+    <div className="box col-span-4 md:col-span-3 w-full">
       <h2
         onClick={toggleAccordion}
         className="flex cursor-pointer items-center justify-between"
