@@ -17,10 +17,11 @@ const config: Config = {
         tGrey: '#333333',
       },
       fontFamily: {
-        calistoga: ['var(--font-calistoga)'],
-        lexend: ['var(--font-lexend)'],
-        solway: ['var(--font-solway)'],
-        bungee: ['var(--font-bungee)'],
+        'calistoga': ['var(--font-calistoga)', 'sans-serif'],
+        'lexend': ['var(--font-lexend)', 'sans-serif'],
+        'solway': ['var(--font-solway)', 'sans-serif'],
+        'bungee': ['var(--font-bungee)', 'sans-serif'],
+        'irene': ['Irene Florentina', 'sans-serif'],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

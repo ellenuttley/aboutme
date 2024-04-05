@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import { Calistoga, Lexend, Solway, Bungee } from "next/font/google";
 import ClientNavbar from "@/components/ClientNavbar";
 import Footer from "@/components/Footer";
 
 import "./globals.css";
+
+const irene = localFont({
+  src: "./IreneFlorentina-Regular.woff2",
+  display: "swap",
+});
 
 const calistoga = Calistoga({
   subsets: ["latin"],
@@ -49,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${calistoga.variable} ${lexend.variable} ${solway.variable} ${bungee.variable}`}
+        className={`${calistoga.variable} ${lexend.variable} ${solway.variable} ${bungee.variable} ${irene.className}`}
       >
         <ClientNavbar />
         {children}
