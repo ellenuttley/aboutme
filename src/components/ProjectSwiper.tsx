@@ -16,7 +16,7 @@ import BedtimeBard from "@/components/SwiperSlides/BedtimeBard";
 
 const ProjectSwiper = () => {
   return (
-      <div className="swiperwrapper">
+      <div className="box">
         <Swiper
           className="myswiper"
           modules={[
@@ -37,6 +37,7 @@ const ProjectSwiper = () => {
             type: "bullets",
             bulletClass: "bg-amber-400",
             bulletActiveClass: "bg-green-400",
+
           }}
           scrollbar={{ draggable: true }}
           // breakpointsBase={window}
