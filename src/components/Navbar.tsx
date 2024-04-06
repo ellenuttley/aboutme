@@ -45,6 +45,21 @@ const Navbar = () => {
             About Me
           </span>
         </a>
+
+        <a
+          href="#my-code"
+          className="sidebar-icon"
+          onMouseEnter={() => handleMouseEnter("my-code")}
+          onMouseLeave={handleMouseLeave}
+        >
+          <FiCode size="33" />
+          <span
+            className={`sidebar-tooltip ${activeTooltip === "my-code" ? "scale-100" : "scale-0"}`}
+          >
+            My Projects
+          </span>
+        </a>
+        
         <a
           href="#about-you"
           className="sidebar-icon"
@@ -56,19 +71,6 @@ const Navbar = () => {
             className={`sidebar-tooltip ${activeTooltip === "about-you" ? "scale-100" : "scale-0"}`}
           >
             About You
-          </span>
-        </a>
-        <a
-          href="#my-code"
-          className="sidebar-icon"
-          onMouseEnter={() => handleMouseEnter("my-code")}
-          onMouseLeave={handleMouseLeave}
-        >
-          <FiCode size="33" />
-          <span
-            className={`sidebar-tooltip ${activeTooltip === "my-code" ? "scale-100" : "scale-0"}`}
-          >
-            My Code
           </span>
         </a>
 
