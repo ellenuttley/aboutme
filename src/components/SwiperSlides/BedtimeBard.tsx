@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
 import React, { useState } from "react";
 import { BsEmojiSunglasses } from "react-icons/bs";
-
+import Image from "next/image";
 
 const BedtimeBard = () => {
   const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
@@ -16,17 +16,19 @@ const BedtimeBard = () => {
   };
 
   return (
-    <div className="slideBody font-solway ">
-      <div className="slideHeader content-center  justify-evenly bg-[#BBAFD3]">
+    <div className="slideBody font-solway flex flex-col ">
+      <div className="slideHeader inline-flex items-center bg-[#BBAFD3]">
         <a
           href="https://github.com/ellenuttley/bedtime-bard"
           onMouseEnter={() => handleMouseEnter("bardLogo")}
           onMouseLeave={handleMouseLeave}
         >
-          <img
-            className="flex max-h-16 md:max-h-20 lg:max-h-24"
+          <Image
+            className="size-fit flex flex-shrink"
             src="/bardLogo.png"
             alt="Bedtime Bard Logo"
+            width={100}
+            height={80}
           />
           <span
             className={`swiper-tooltip -translate-x-32  ${activeTooltip === "bardLogo" ? "scale-100" : "scale-0"}`}
@@ -35,16 +37,16 @@ const BedtimeBard = () => {
           </span>
         </a>
 
-        <h1 className="slideTitle flex self-center font-bungee">
+        <h1 className="slideTitle flex flex-grow self-center font-bungee">
           BEDTIME BARD{" "}
         </h1>
       </div>
       <p className="slideBody font-solway dark:bg-transparent ">
         Bedtime Bard is a Flask built web app that uses the OpenAI API to take
         the stress out of bedtime. It writes tailor-made, age-appropriate
-        bedtime stories, and then weaves in the child's bedtime routine steps.
-        So, if they want to know what comes next, they better hurry up and brush
-        their teeth!{" "}
+        bedtime stories, and then weaves in the child&apos;s bedtime routine
+        steps. So, if they want to know what comes next, they better hurry up
+        and brush their teeth!{" "}
       </p>
 
       <div className="slideBody shadow-bardBlack mb-6 space-y-1 rounded-xl bg-[#9DC3CC] p-6 font-solway shadow-sm">
@@ -58,11 +60,10 @@ const BedtimeBard = () => {
             CFGDegree
           </a>
         </p>
+        <p>Check out my presentation below for more information</p>
         <p>
-          Check out my presentation below for more information - it got 100%
-          {"  "}
+          - it got 100%{"  "}
           <span className="inline-block text-tGrey/50">
-            {"  "}
             <BsEmojiSunglasses />
           </span>
         </p>
@@ -97,8 +98,8 @@ const BedtimeBard = () => {
           title="Bedtime Bard Presentation"
         ></iframe>
       </div>
-      {/* 
-      <p className="slideBody font-solway shadow-bardBlack mb-6 rounded-xl bg-[#E7B1F6] p-6 shadow-sm">
+
+      <p className="slideBody shadow-bardBlack mb-6 rounded-xl bg-[#E7B1F6] p-6 font-solway shadow-sm">
         Click the image below to view the wireframes and user story
       </p>
 
@@ -106,7 +107,7 @@ const BedtimeBard = () => {
         href="https://www.canva.com/design/DAFiqI0neAQ/RlNIIqjLNbFkPRyxAojOdQ/view?utm_content=DAFiqI0neAQ&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
         target="#"
         rel="noopener"
-        className="shadow-bardBlack relative block h-auto w-full rounded-xl shadow-sm touch-pinch-zoom"
+        className="shadow-bardBlack relative block h-auto w-full -translate-y-1 touch-pinch-zoom rounded-xl shadow-sm"
         style={{
           paddingTop: "56.2500%",
           paddingBottom: "0",
@@ -134,7 +135,7 @@ const BedtimeBard = () => {
           allow="fullscreen"
           title="BedtimeBard Wireframes"
         ></iframe>
-      </a> */}
+      </a>
     </div>
   );
 };

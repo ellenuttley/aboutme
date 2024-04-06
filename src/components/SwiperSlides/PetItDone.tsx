@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 const PetItDone = () => {
   const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
@@ -14,17 +15,19 @@ const PetItDone = () => {
   };
 
   return (
-    <div className="slideBody font-irene">
-      <div className="slideHeader bg-[#B0E3EE]">
+    <div className="slideBody flex  flex-col font-irene">
+      <div className="slideHeader h-fit inline-flex items-center  bg-[#B0E3EE]">
         <a
           href="https://github.com/ellenuttley/pet-it-done"
           onMouseEnter={() => handleMouseEnter("petitdoneAx")}
           onMouseLeave={handleMouseLeave}
         >
-          <img
-            className="max-h-16 flex-shrink md:max-h-20 lg:max-h-24"
+          <Image
+            className="flex size-fit flex-shrink"
             src="/petitdoneAx.png"
             alt="Pet It Done Axolotl"
+            width={100}
+            height={80}
           />
           <span
             className={`swiper-tooltip -translate-x-32  ${activeTooltip === "petitdoneAx" ? "scale-100" : "scale-0"}`}
@@ -32,7 +35,7 @@ const PetItDone = () => {
             Click me to view the GitHub!
           </span>
         </a>
-        <h1 className="slideTitle font-irene flex-grow self-center normal-case">
+        <h1 className="slideTitle flex-grow self-center font-irene normal-case">
           PetItDone{" "}
         </h1>
       </div>
@@ -96,7 +99,7 @@ const PetItDone = () => {
           title="PetItDone Presentation"
         ></iframe>
       </div>
-      {/* 
+      
       <p className="slideBody shadow-bardBlack mb-6 rounded-xl bg-[#FAF2A2] p-6 shadow-sm">
         Click the image below to view the wireframes and user story
       </p>
@@ -133,7 +136,7 @@ const PetItDone = () => {
           allow="fullscreen"
           title="PetItDone Wireframes"
         ></iframe>
-      </a> */}
+      </a>
     </div>
   );
 };
