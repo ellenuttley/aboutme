@@ -11,7 +11,7 @@ export default function Home() {
     <main className="main">
       <section id="home">
         <div className="mb-3 gap-2">
-          <h2 className="box size-fit  first-letter:float-left  first-letter:text-5xl ">
+          <h2 className="box size-fit  first-letter:float-left  first-letter:text-5xl md:first-letter:text-6xl  ">
             Greetings, Tailwind hiring personnel!
           </h2>
         </div>
@@ -29,17 +29,22 @@ export default function Home() {
       <section id="about-me" className="section ">
         <AboutMe />
       </section>
+
+      <section id="my-code" className="section">
+        <h1 className="rounded-lg border-b-8 border-l-4 border-t-8 border-tBlack border-b-transparent border-t-transparent bg-transparent pl-5 underline decoration-embossed decoration-4 embossed">
+          My Projects
+        </h1>
+        <MyCode />
+      </section>
+
       <section id="about-you" className="section ">
         <AboutYou />
       </section>
-      <section id="my-code" className="section">
-        <h1>I love code</h1>
-        <MyCode />
-      </section>
-      <section id="my-design" className="section">
+
+      {/* <section id="my-design" className="section">
         <h1> I love design</h1>
         <MyDesign />
-      </section>
+      </section> */}
 
       <h1>
         {/*         
