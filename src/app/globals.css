@@ -38,10 +38,10 @@
 
 @layer base {
   body {
-    @apply bg-tSecondary antialiased;
+    @apply bg-tSecondary antialiased pb-5;
   }
   main {
-    @apply font-lexend font-light;
+    @apply font-lexend font-light ;
   }
 
   p {
@@ -132,7 +132,7 @@
     @apply fixed left-1 right-1 top-1 z-10 flex w-fit border-spacing-x-1 flex-row justify-evenly rounded-md border bg-tWhite pb-2 pt-2 opacity-10
         shadow-md shadow-tPrimary
 
-        -translate-x-[90%]  lg:-translate-x-[90%] transform transition-transform duration-300 hover:opacity-100 lg:hover:translate-x-0
+         -translate-y-[80%] max-md:hover:translate-y-0  lg:-translate-x-[90%] transform transition-transform duration-300 hover:opacity-100 lg:hover:translate-x-0
 
         max-lg:w-dvw lg:bottom-auto lg:left-2 lg:right-auto lg:top-2/4 lg:mx-auto lg:min-w-fit lg:-translate-y-2/4 lg:transform lg:flex-col lg:gap-5 
         lg:p-3 lg:pb-5
