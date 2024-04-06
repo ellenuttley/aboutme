@@ -1,9 +1,8 @@
-import Image from "next/image";
 import AboutYou from "./AboutYou";
-// import Navbar from "@/components/Navbar";
 import MyCode from "@/app/MyCode";
-import MyDesign from "@/app/MyDesign";
 import AboutMe from "@/app/AboutMe";
+import BeforeAfters from "@/components/BeforeAfters";
+
 import { HoverTextImpressive, HoverTextAutism } from "@/components/HoverText";
 
 export default function Home() {
@@ -31,7 +30,7 @@ export default function Home() {
       </section>
 
       <section id="my-code" className="section">
-        <h1 className="rounded-lg border-b-8 border-l-4 border-t-8 border-tBlack border-b-transparent border-t-transparent bg-transparent pl-5 underline decoration-embossed decoration-4 embossed">
+        <h1 className="decoration-embossed embossed rounded-lg border-b-8 border-l-4 border-t-8 border-tBlack border-b-transparent border-t-transparent bg-transparent pl-5 underline decoration-4">
           My Projects
         </h1>
         <MyCode />
@@ -41,10 +40,9 @@ export default function Home() {
         <AboutYou />
       </section>
 
-      {/* <section id="my-design" className="section">
-        <h1> I love design</h1>
-        <MyDesign />
-      </section> */}
+      <section id="my-design" className="section">
+        <BeforeAfters />
+      </section>
 
       <h1>
         {/*         

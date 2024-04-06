@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FiChevronRight } from "react-icons/fi";
+import Image from "next/image";
 
 const BeforeAfterCarousel = ({ beforeImage, afterImage }) => {
   const [currentImage, setCurrentImage] = useState(beforeImage);
@@ -13,20 +14,24 @@ const BeforeAfterCarousel = ({ beforeImage, afterImage }) => {
   };
 
   return (
-    <div className="relative embossed">
+    <div className="embossed relative will-change-contents">
       <button
         onClick={handleSlide}
-        className="absolute right-2 top-2 items-center justify-center text-center flex w-fit transform rounded-full bg-tSecondary hover:bg-opacity-10 p-1 pl-2 text-sm shadow-inner shadow-tGrey/50 md:text-lg lg:text-xl"
+        className="absolute right-2 top-2 flex  w-fit transform items-center justify-center rounded-full bg-tSecondary p-1 pl-2 text-center text-sm shadow-inner shadow-tGrey/50 hover:bg-opacity-10 md:text-lg lg:text-xl"
       >
         {currentCaption}{" "}
         <span className="inline-block text-lg">
           <FiChevronRight />
         </span>
       </button>
-      <img
+      <Image
         src={currentImage}
-        alt="Before and After"
-        className="h-auto w-full rounded-lg object-cover"
+        alt="Before and After Design Images"
+        className="size-full rounded-lg object-cover"
+        width="700"
+        height="700"
+        loading="lazy"
+        quality={100}
       />
     </div>
   );
