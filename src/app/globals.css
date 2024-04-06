@@ -4,8 +4,7 @@
 
 @font-face {
   font-family: "Irene Florentina";
-  src:
-    url("/IreneFlorentina-Regular.woff2") format("woff2"),
+  src: url("/IreneFlorentina-Regular.woff2") format("woff2"),
     url("/IreneFlorentina-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -53,15 +52,15 @@
   }
 
   h1 {
-    @apply my-3 font-calistoga text-4xl leading-loose text-tBlack transition-transform md:my-5 md:text-5xl lg:my-8 lg:text-7xl;
+    @apply font-calistoga text-tBlack my-3 text-4xl leading-loose transition-transform md:my-5 md:text-5xl lg:my-8 lg:text-7xl;
   }
 
   h2 {
-    @apply font-calistoga text-2xl leading-loose text-tBlack transition-transform md:text-4xl lg:text-5xl;
+    @apply font-calistoga text-tBlack text-2xl leading-loose transition-transform md:text-4xl lg:text-5xl;
   }
 
   h3 {
-    @apply font-calistoga text-xl leading-loose text-tBlack transition-transform md:text-3xl lg:text-7xl;
+    @apply font-calistoga text-tBlack text-xl leading-loose transition-transform md:text-3xl lg:text-7xl;
   }
 }
 
@@ -73,15 +72,15 @@
 
 @layer components {
   .box {
-    @apply container m-auto rounded-lg border border-tTransition bg-tWhite p-4 text-left shadow-sm shadow-tBlack md:p-5;
+    @apply border-tTransition bg-tWhite shadow-tBlack container m-auto rounded-lg border p-4 text-left shadow-sm md:p-5;
   }
 
   .button {
-    @apply whiteHeader m-1 size-fit rounded-lg border border-tBlack/30 bg-tSecondary px-3 py-1 text-center font-calistoga text-lg tracking-wide shadow-sm shadow-tBlack hover:shadow-md hover:shadow-tBlack md:text-xl md:hover:skew-y-1;
+    @apply whiteHeader border-tBlack/30 bg-tSecondary font-calistoga shadow-tBlack hover:shadow-tBlack m-1 size-fit rounded-lg border px-3 py-1 text-center text-lg tracking-wide shadow-sm hover:shadow-md md:text-xl md:hover:skew-y-1;
   }
 
   .page {
-    @apply container relative m-auto size-auto flex-col content-center items-center justify-items-center rounded-lg border border-tTransition bg-tWhite p-5 text-center shadow-sm shadow-tBlack;
+    @apply border-tTransition bg-tWhite shadow-tBlack container relative m-auto size-auto flex-col content-center items-center justify-items-center rounded-lg border p-5 text-center shadow-sm;
   }
 
   .section {
@@ -89,102 +88,102 @@
   }
 
   .main {
-    @apply flex h-dvh w-dvw flex-col items-center text-pretty p-2 text-tBlack *:mt-4 md:p-8;
+    @apply text-tBlack flex h-dvh w-dvw flex-col items-center text-pretty p-2 *:mt-4 md:p-8;
   }
 
   .colour {
-    @apply flex cursor-pointer flex-row gap-1 border border-tTransition/20 p-1 font-lexend text-sm font-medium shadow-sm shadow-tBlack *:min-h-8 *:place-content-center *:items-center  hover:shadow-inner hover:shadow-tBlack md:gap-4 md:text-xl md:*:min-h-12;
+    @apply border-tTransition/20 font-lexend shadow-tBlack hover:shadow-tBlack flex cursor-pointer flex-row gap-1 border p-1 text-sm font-medium shadow-sm *:min-h-8 *:place-content-center  *:items-center hover:shadow-inner md:gap-4 md:text-xl md:*:min-h-12;
   }
 
   .quotebox-wrapper {
-    @apply flex size-fit flex-row place-items-center justify-evenly place-self-center overscroll-contain rounded-lg  rounded-e-full rounded-s-full border-l-4 border-r-4 border-tGrey/30 bg-tTransition p-2 shadow-xl shadow-tBlack/20;
+    @apply border-tGrey/30 bg-tTransition shadow-tBlack/20 flex size-fit flex-row place-items-center justify-evenly  place-self-center overscroll-contain rounded-lg rounded-e-full rounded-s-full border-l-4 border-r-4 p-2 shadow-xl;
   }
 
   .quotebox-icon {
-    @apply size-auto rounded-full border border-tGrey/50 bg-tSecondary p-0.5 text-3xl text-tGrey/70 shadow-inner shadow-tGrey/80 md:text-4xl;
+    @apply border-tGrey/50 bg-tSecondary text-tGrey/70 shadow-tGrey/80 size-auto rounded-full border p-0.5 text-3xl shadow-inner md:text-4xl;
   }
 
   .quotebox {
-    @apply flex flex-grow place-items-center justify-evenly px-3 text-center font-calistoga text-lg md:text-2xl lg:text-3xl;
+    @apply font-calistoga flex flex-grow place-items-center justify-evenly px-3 text-center text-lg md:text-2xl lg:text-3xl;
   }
 
   .reviewbox {
-    @apply m-1 rounded-lg border-e border-s border-tGrey/30  bg-tWhite/90 p-3 shadow-xl shadow-tBlack/20;
+    @apply border-tGrey/30 bg-tWhite/90 shadow-tBlack/20 m-1 rounded-lg  border-e border-s p-3 shadow-xl;
   }
 
   .titlebox-wrapper {
-    @apply rounded-lg border-e border-s border-tGrey/30 bg-tWhite p-2 bg-blend-hue shadow-xl shadow-tBlack/20;
+    @apply border-tGrey/30 bg-tWhite shadow-tBlack/20 rounded-lg border-e border-s p-2 bg-blend-hue shadow-xl;
   }
 
   .titlebox-icon {
-    @apply rounded-full border-2 border-tGrey bg-tSecondary p-0.5 text-4xl text-tBlack shadow-inner shadow-tGrey/80;
+    @apply border-tGrey bg-tSecondary text-tBlack shadow-tGrey/80 rounded-full border-2 p-0.5 text-4xl shadow-inner;
   }
 
   .titlebox {
-    @apply flex flex-grow place-items-center justify-evenly p-2 px-1 text-center font-calistoga text-sm max-md:text-base lg:text-xl;
+    @apply font-calistoga flex flex-grow place-items-center justify-evenly p-2 px-1 text-center text-sm max-md:text-base lg:text-xl;
   }
 
   .listbox {
-    @apply rounded-lg border-e border-s border-tGrey/30 p-2  shadow-xl shadow-tBlack/20;
+    @apply border-tGrey/30 shadow-tBlack/20 rounded-lg border-e border-s  p-2 shadow-xl;
   }
 
   .sidebar {
-    @apply fixed left-1 right-1 top-1 z-10 flex w-fit border-spacing-x-1 -translate-y-[80%] transform flex-row justify-evenly rounded-md border bg-tWhite pb-2
-        pt-2 opacity-10
+    @apply bg-tWhite shadow-tPrimary dark:border-tPrimary dark:bg-tPrimary dark:shadow-tSecondary fixed left-1 right-1 top-1 z-10 flex w-fit border-spacing-x-1 -translate-y-[80%] transform flex-row
+        justify-evenly rounded-md
 
-         shadow-md shadow-tPrimary  transition-transform duration-300 hover:opacity-100 max-lg:w-dvw max-md:hover:translate-y-0 lg:bottom-auto
+         border pb-2  pt-2 opacity-10 shadow-md transition-transform duration-300 hover:opacity-100
 
-        lg:left-2 lg:right-auto lg:top-2/4 lg:mx-auto lg:min-w-fit lg:-translate-x-[90%] lg:-translate-y-2/4 lg:transform lg:flex-col lg:gap-5 lg:p-3 
-        lg:pb-5 lg:pt-5
+        max-lg:w-dvw max-md:hover:translate-y-0 lg:bottom-auto lg:left-2 lg:right-auto lg:top-2/4 lg:mx-auto lg:min-w-fit lg:-translate-x-[90%] lg:-translate-y-2/4 lg:transform 
+        lg:flex-col lg:gap-5
 
-		lg:hover:translate-x-0
+		lg:p-3
         
-        dark:border-tPrimary dark:bg-tPrimary dark:shadow-tSecondary;
+        lg:pb-5 lg:pt-5 lg:hover:translate-x-0;
   }
 
   .sidebar-icon {
-    @apply relative z-10 box-border flex h-max w-max min-w-max cursor-pointer items-center justify-center
-    rounded-xl border border-solid border-tWhite
+    @apply border-tWhite hover:border-tTransition hover:shadow-tBlack dark:border-tPrimary dark:hover:border-tSecondary dark:hover:shadow-tSecondary relative z-10 box-border flex
+    h-max w-max min-w-max cursor-pointer
 
-    p-2 transition-all duration-200 ease-linear
-    hover:rounded-lg hover:border-tTransition hover:shadow-md hover:shadow-tBlack
+    items-center justify-center rounded-xl border
+    border-solid p-2 transition-all duration-200
 
-    lg:m-1
+    ease-linear
 
-    dark:border-tPrimary dark:hover:border-tSecondary dark:hover:shadow-tSecondary;
+    hover:rounded-lg hover:shadow-md lg:m-1;
   }
 
   .sidebar-tooltip {
-    @apply absolute top-11 z-10 m-2 size-auto min-w-max origin-top scale-0 rounded-md bg-tPrimary/95 p-2 font-lexend font-light
-    text-tWhite
+    @apply bg-tPrimary/95 font-lexend text-tWhite dark:border-tPrimary dark:bg-tPrimary dark:shadow-tSecondary absolute top-11 z-10 m-2 size-auto min-w-max origin-top
+    scale-0
+    rounded-md p-2 font-light
+
     shadow-md transition-all duration-100
 
-    lg:left-14 lg:top-auto lg:origin-left
-
-    dark:border-tPrimary dark:bg-tPrimary dark:font-light dark:shadow-sm dark:shadow-tSecondary;
+    lg:left-14 lg:top-auto lg:origin-left dark:font-light dark:shadow-sm;
   }
 
   .swiper-tooltip {
-    @apply absolute  top-auto z-10 m-2 size-auto min-w-max origin-top scale-0 rounded-md bg-tPrimary/95 p-2 font-lexend
-    font-light
-    text-tWhite shadow-md transition-all
+    @apply bg-tPrimary/95  font-lexend text-tWhite dark:border-tPrimary dark:bg-tPrimary dark:shadow-tSecondary absolute top-auto z-10 m-2 size-auto min-w-max
+    origin-top
+    scale-0 rounded-md p-2
 
-    duration-100 lg:origin-left
+    font-light shadow-md
 
-    dark:border-tPrimary dark:bg-tPrimary dark:font-light dark:shadow-sm dark:shadow-tSecondary;
+    transition-all duration-100 lg:origin-left dark:font-light dark:shadow-sm;
   }
 
   .swiperwrapper {
-    @apply /* */ -z-0 flex rounded-md 
+    @apply /* */ bg-tWhite dark:border-tSecondary dark:bg-tSecondary 
        
         
-        bg-tWhite pb-2 md:bottom-5 md:right-7 md:-translate-y-1 md:transform lg:top-7
+        dark:shadow-tPrimary -z-0 flex rounded-md pb-2 md:bottom-5 md:right-7
         
-        dark:border-tSecondary dark:bg-tSecondary dark:bg-opacity-40 dark:shadow-tPrimary;
+        md:-translate-y-1 md:transform lg:top-7 dark:bg-opacity-40;
   }
 
   .myswiper {
-    @apply size-auto rounded-md bg-tWhite 
+    @apply bg-tWhite size-auto rounded-md 
         dark:bg-transparent;
   }
 
@@ -197,38 +196,32 @@
   }
 
   .slideBody {
-    @apply mt-3 size-auto items-center
-        justify-center bg-tWhite p-2 px-1 text-base leading-normal text-tBlack md:p-5 md:text-xl
+    @apply bg-tWhite text-tBlack dark:border-tSecondary
+        dark:bg-tPrimary dark:text-tWhite dark:shadow-tPrimary mt-3 size-auto items-center justify-center p-2 px-1
 
-        dark:border-tSecondary dark:bg-tPrimary dark:bg-opacity-70 dark:text-tWhite dark:shadow-tPrimary;
+        text-base leading-normal md:p-5 md:text-xl dark:bg-opacity-70;
   }
 
   .slideHeader {
-    @apply mx-3 inline-flex w-fit self-center rounded-xl p-3 shadow-sm shadow-tBlack  md:p-6  dark:border-tSecondary dark:bg-tPrimary dark:bg-opacity-70 dark:text-tWhite  dark:shadow-tPrimary;
+    @apply shadow-tBlack dark:border-tSecondary dark:bg-tPrimary dark:text-tWhite dark:shadow-tPrimary mx-3 inline-flex w-fit  self-center  rounded-xl p-3 shadow-sm md:p-6  dark:bg-opacity-70;
   }
 
   .slideTitle {
-    @apply ml-3 flex p-3 text-2xl text-tBlack md:pt-4 md:text-5xl lg:text-7xl
-        dark:text-tWhite;
+    @apply text-tBlack dark:text-tWhite ml-3 flex p-3 text-2xl md:pt-4 md:text-5xl
+        lg:text-7xl;
   }
 }
 
 .blackHeader {
   color: theme("colors.tBlack");
-  text-shadow:
-    -0.5px 0 theme("colors.tWhite"),
-    0 0.5px theme("colors.tWhite"),
-    0.5px 0 theme("colors.tWhite"),
-    0 -0.5px theme("colors.tWhite");
+  text-shadow: -0.5px 0 theme("colors.tWhite"), 0 0.5px theme("colors.tWhite"),
+    0.5px 0 theme("colors.tWhite"), 0 -0.5px theme("colors.tWhite");
 }
 
 .whiteHeader {
   color: theme("colors.tWhite");
-  text-shadow:
-    -0.5px 0 theme("colors.tBlack"),
-    0 0.5px theme("colors.tBlack"),
-    0.5px 0 theme("colors.tBlack"),
-    0 -0.5px theme("colors.tBlack");
+  text-shadow: -0.5px 0 theme("colors.tBlack"), 0 0.5px theme("colors.tBlack"),
+    0.5px 0 theme("colors.tBlack"), 0 -0.5px theme("colors.tBlack");
 }
 
 .embossed {
