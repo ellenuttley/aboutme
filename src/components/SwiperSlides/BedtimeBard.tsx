@@ -16,7 +16,7 @@ const BedtimeBard = () => {
   };
 
   return (
-    <div className="slideBody font-solway flex flex-col ">
+    <div className="slideBody flex flex-col font-solway ">
       <div className="slideHeader inline-flex items-center bg-[#BBAFD3]">
         <a
           href="https://github.com/ellenuttley/bedtime-bard"
@@ -24,7 +24,7 @@ const BedtimeBard = () => {
           onMouseLeave={handleMouseLeave}
         >
           <Image
-            className="size-fit flex flex-shrink"
+            className="flex size-fit flex-shrink"
             src="/bardLogo.png"
             alt="Bedtime Bard Logo"
             width={100}

@@ -20,7 +20,7 @@ export const HoverTextAutism = () => {
         {" "}
         Autistic
       </span>
-      <span className="lg:text-5xl hidden relative whitespace-break-spaces text-2xl leading-loose  text-tTransition opacity-0  transition-transform group-hover:inline-block group-hover:opacity-100 md:text-4xl">
+      <span className="relative hidden whitespace-break-spaces text-2xl leading-loose text-tTransition  opacity-0 transition-transform  group-hover:inline-block group-hover:opacity-100 md:text-4xl lg:text-5xl">
         {" "}
         and that is a good thing
       </span>

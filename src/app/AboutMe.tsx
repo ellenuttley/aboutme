@@ -5,7 +5,7 @@ import AutismAccordion from "@/components/AutismAccordion";
 const AboutMe = () => {
   return (
     <div className="grid grid-cols-4 gap-2 gap-y-5 md:grid-cols-3">
-      <div className="col-span-4 md:col-span-2 place-content-center lg:col-span-1">
+      <div className="col-span-4 place-content-center md:col-span-2 lg:col-span-1">
         <figure>
           <Image
             className="box rounded-lg border border-tTransition p-1  shadow-sm shadow-tBlack"
@@ -14,12 +14,12 @@ const AboutMe = () => {
             height={500}
             alt="Portrait picture of Ellen"
           />
-          <figcaption className="box mt-2 p-1 max-md:col-span-2 text-center font-lexend text-base md:text-sm">
+          <figcaption className="box mt-2 p-1 text-center font-lexend text-base max-md:col-span-2 md:text-sm">
             I have never looked this good in real life
           </figcaption>
         </figure>
       </div>
-      <div className="box col-span-4 max-md:order-first md:col-span-2 h-full place-content-center text-left md:pt-2 ">
+      <div className="box col-span-4 h-full place-content-center text-left max-md:order-first md:col-span-2 md:pt-2 ">
         <h1>I am Ellen</h1>
         <div className="flex text-left *:space-y-2 md:mt-5">
           <ul>

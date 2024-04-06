@@ -1,20 +1,20 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import { FiGithub, FiAtSign, FiClipboard } from "react-icons/fi";
 import { FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
- const [showNotification, setShowNotification] = useState(false);
- const email = "ellenuttley@gmail.com";
+  const [showNotification, setShowNotification] = useState(false);
+  const email = "ellenuttley@gmail.com";
 
- const copyToClipboard = () => {
-   navigator.clipboard.writeText(email);
-   setShowNotification(true);
-   setTimeout(() => setShowNotification(false), 2000); 
- };
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(email);
+    setShowNotification(true);
+    setTimeout(() => setShowNotification(false), 2000);
+  };
 
   return (
-    <footer className=" group fixed bottom-1 left-5 right-5 z-10 flex w-auto h-fit translate-y-[90%] transform flex-row justify-evenly rounded-md border-2 border-solid bg-tWhite pb-2 pt-2 font-lexend text-tBlack opacity-10 shadow-md shadow-tPrimary transition-transform duration-300 hover:opacity-100 hover:translate-y-0 dark:border-tPrimary dark:bg-tPrimary dark:shadow-tSecondary">
+    <footer className=" group fixed bottom-1 left-5 right-5 z-10 flex h-fit w-auto translate-y-[90%] transform flex-row justify-evenly rounded-md border-2 border-solid bg-tWhite pb-2 pt-2 font-lexend text-tBlack opacity-10 shadow-md shadow-tPrimary transition-transform duration-300 hover:translate-y-0 hover:opacity-100 dark:border-tPrimary dark:bg-tPrimary dark:shadow-tSecondary">
       <a
         href="https://github.com/ellenuttley/aboutme"
         target="_blank"

@@ -31,7 +31,7 @@ const solway = Solway({
   display: "swap",
   variable: "--font-solway",
   preload: true,
-  weight: "400"
+  weight: "400",
 });
 
 const bungee = Bungee({

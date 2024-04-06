@@ -7,10 +7,8 @@ import ColorPalette from "@/components/ColourPalette";
 import { FiGithub } from "react-icons/fi";
 import ReviewBox from "@/components/ReviewBox";
 
-
-
 const AboutYou = () => {
-    const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
+  const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
 
   const handleMouseEnter = (tooltipId: string) => {
     setActiveTooltip(tooltipId);
@@ -55,8 +53,9 @@ const AboutYou = () => {
             itched at my brain for a long time.
           </p>
           <p>
-            This is a palette generator I made that converts the &#39;primary&#39;
-            colour into individual &#39;red&#39;, &#39;green&#39;, and &#39;blue&#39; variables.
+            This is a palette generator I made that converts the
+            &#39;primary&#39; colour into individual &#39;red&#39;,
+            &#39;green&#39;, and &#39;blue&#39; variables.
           </p>
           <p>
             The palette is then generated, with algorithms that are designed to
@@ -107,7 +106,8 @@ const AboutYou = () => {
         <p>
           I am an entertainer at heart, and this leaks into the way I conduct my
           training sessions. I know that if my trainees aren&#39;t engaged, they
-          aren&#39;t listening - and if they aren&#39;t listening, they can&#39;t learn.
+          aren&#39;t listening - and if they aren&#39;t listening, they
+          can&#39;t learn.
         </p>
       </div>
 
@@ -134,7 +134,8 @@ const AboutYou = () => {
           impace simplest tweaks to make the biggest impact.
         </p>
         <p>
-          My years in writing spaces have equipt me to build what my client wants, and I pride myself in being able to run with my clients vision.
+          My years in writing spaces have equipt me to build what my client
+          wants, and I pride myself in being able to run with my clients vision.
         </p>
       </div>
       {/* <div className="col-span-4">

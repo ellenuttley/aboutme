@@ -3,7 +3,6 @@ import { useState } from "react";
 import { FiHome, FiUserCheck, FiCode, FiPenTool, FiSun } from "react-icons/fi";
 import { SiTailwindcss } from "react-icons/si";
 
-
 const Navbar = () => {
   const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
 
@@ -59,7 +58,7 @@ const Navbar = () => {
             My Projects
           </span>
         </a>
-        
+
         <a
           href="#about-you"
           className="sidebar-icon"

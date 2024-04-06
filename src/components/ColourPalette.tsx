@@ -221,12 +221,12 @@ function ColorPalette() {
   ) => {
     navigator.clipboard.writeText(hexCode);
     setShowNotification(true);
-    setTimeout(() => setShowNotification(false), 2000); 
+    setTimeout(() => setShowNotification(false), 2000);
   };
 
   return (
     <>
-      <div className="w-dvh blackHeader flex flex-col gap-1 rounded-xl bg-tWhite p-1 md:p-3 font-lexend text-lg font-medium uppercase *:place-content-center *:items-center  *:justify-evenly *:rounded-lg ">
+      <div className="w-dvh blackHeader flex flex-col gap-1 rounded-xl bg-tWhite p-1 font-lexend text-lg font-medium uppercase *:place-content-center *:items-center *:justify-evenly  *:rounded-lg md:p-3 ">
         <div className=" flex gap-1 *:place-content-center">
           <input
             type="color"
@@ -242,7 +242,6 @@ function ColorPalette() {
         <div style={{ backgroundColor: primaryColor }} className="colour">
           <label onClick={(event) => copyToClipboard(primaryColor, event)}>
             {primaryColor}
-
           </label>
         </div>
 
@@ -276,22 +275,25 @@ function ColorPalette() {
           </label>
         </div>
 
-        <div style={{ backgroundColor: blackColor }} className="colour shadow-tWhite">
+        <div
+          style={{ backgroundColor: blackColor }}
+          className="colour shadow-tWhite"
+        >
           <label onClick={(event) => copyToClipboard(blackColor, event)}>
             {blackColor}
           </label>
         </div>
 
         <button
-          className="button self-center text-center w-full"
+          className="button w-full self-center text-center"
           onClick={generateRandomPalette}
         >
           Random
-        {showNotification && (
-          <div className="absolute left-1 font-lexend font-extralight rounded bg-t px-2 py-1 text-center text-sm normal-case text-tWhite bg-tPrimary shadow-md">
-            Hex code copied to clipboard
-          </div>
-        )}
+          {showNotification && (
+            <div className="bg-t absolute left-1 rounded bg-tPrimary px-2 py-1 text-center font-lexend text-sm font-extralight normal-case text-tWhite shadow-md">
+              Hex code copied to clipboard
+            </div>
+          )}
         </button>
       </div>
     </>

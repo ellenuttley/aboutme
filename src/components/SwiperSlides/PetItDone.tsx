@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -16,7 +16,7 @@ const PetItDone = () => {
 
   return (
     <div className="slideBody flex  flex-col font-irene">
-      <div className="slideHeader h-fit inline-flex items-center  bg-[#B0E3EE]">
+      <div className="slideHeader inline-flex h-fit items-center  bg-[#B0E3EE]">
         <a
           href="https://github.com/ellenuttley/pet-it-done"
           onMouseEnter={() => handleMouseEnter("petitdoneAx")}
@@ -99,7 +99,7 @@ const PetItDone = () => {
           title="PetItDone Presentation"
         ></iframe>
       </div>
-      
+
       <p className="slideBody shadow-bardBlack mb-6 rounded-xl bg-[#FAF2A2] p-6 shadow-sm">
         Click the image below to view the wireframes and user story
       </p>

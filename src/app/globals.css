@@ -38,22 +38,22 @@
 
 @layer base {
   body {
-    @apply bg-tSecondary antialiased pb-5;
+    @apply bg-tSecondary pb-5 antialiased;
   }
   main {
-    @apply font-lexend font-light ;
+    @apply font-lexend font-light;
   }
 
   p {
-    @apply text-base md:text-lg lg:text-xl 
+    @apply text-base md:text-lg lg:text-xl;
   }
 
   div {
-    @apply text-base md:text-lg lg:text-xl
+    @apply text-base md:text-lg lg:text-xl;
   }
 
   h1 {
-    @apply font-calistoga my-3 md:my-5 lg:my-8 text-4xl leading-loose text-tBlack transition-transform md:text-5xl lg:text-7xl;
+    @apply my-3 font-calistoga text-4xl leading-loose text-tBlack transition-transform md:my-5 md:text-5xl lg:my-8 lg:text-7xl;
   }
 
   h2 {
@@ -129,15 +129,15 @@
   }
 
   .sidebar {
-    @apply fixed left-1 right-1 top-1 z-10 flex w-fit border-spacing-x-1 flex-row justify-evenly rounded-md border bg-tWhite pb-2 pt-2 opacity-10
-        shadow-md shadow-tPrimary
+    @apply fixed left-1 right-1 top-1 z-10 flex w-fit border-spacing-x-1 -translate-y-[80%] transform flex-row justify-evenly rounded-md border bg-tWhite pb-2
+        pt-2 opacity-10
 
-         -translate-y-[80%] max-md:hover:translate-y-0  lg:-translate-x-[90%] transform transition-transform duration-300 hover:opacity-100 lg:hover:translate-x-0
+         shadow-md shadow-tPrimary  transition-transform duration-300 hover:opacity-100 max-lg:w-dvw max-md:hover:translate-y-0 lg:bottom-auto
 
-        max-lg:w-dvw lg:bottom-auto lg:left-2 lg:right-auto lg:top-2/4 lg:mx-auto lg:min-w-fit lg:-translate-y-2/4 lg:transform lg:flex-col lg:gap-5 
-        lg:p-3 lg:pb-5
+        lg:left-2 lg:right-auto lg:top-2/4 lg:mx-auto lg:min-w-fit lg:-translate-x-[90%] lg:-translate-y-2/4 lg:transform lg:flex-col lg:gap-5 lg:p-3 
+        lg:pb-5 lg:pt-5
 
-		lg:pt-5
+		lg:hover:translate-x-0
         
         dark:border-tPrimary dark:bg-tPrimary dark:shadow-tSecondary;
   }
@@ -165,20 +165,20 @@
   }
 
   .swiper-tooltip {
-    @apply absolute  z-10 m-2 size-auto min-w-max origin-top scale-0 rounded-md bg-tPrimary/95 p-2 font-lexend font-light
-    text-tWhite
-    shadow-md transition-all duration-100
+    @apply absolute  top-auto z-10 m-2 size-auto min-w-max origin-top scale-0 rounded-md bg-tPrimary/95 p-2 font-lexend
+    font-light
+    text-tWhite shadow-md transition-all
 
-    top-auto lg:origin-left
+    duration-100 lg:origin-left
 
     dark:border-tPrimary dark:bg-tPrimary dark:font-light dark:shadow-sm dark:shadow-tSecondary;
   }
 
   .swiperwrapper {
-    @apply -z-0 flex rounded-md bg-tWhite pb-2 
+    @apply /* */ -z-0 flex rounded-md 
        
         
-        /* md:bottom-5 md:right-7 md:-translate-y-1 md:transform lg:top-7 */
+        bg-tWhite pb-2 md:bottom-5 md:right-7 md:-translate-y-1 md:transform lg:top-7
         
         dark:border-tSecondary dark:bg-tSecondary dark:bg-opacity-40 dark:shadow-tPrimary;
   }
@@ -189,30 +189,28 @@
   }
 
   .swiperslide {
-    @apply flex size-auto flex-col overflow-y-auto rounded-md text-center
+    @apply /* */ flex size-auto flex-col overflow-y-auto
         
-        /* lg:mx-12 lg:px-7 */
+        rounded-md text-center lg:mx-12 lg:px-7
 
         dark:bg-transparent;
   }
 
-    .slideBody {
-    @apply mt-3 justify-center items-center
-        md:text-xl size-auto bg-tWhite p-2 px-1 md:p-5 text-base leading-normal text-tBlack
+  .slideBody {
+    @apply mt-3 size-auto items-center
+        justify-center bg-tWhite p-2 px-1 text-base leading-normal text-tBlack md:p-5 md:text-xl
 
         dark:border-tSecondary dark:bg-tPrimary dark:bg-opacity-70 dark:text-tWhite dark:shadow-tPrimary;
   }
 
   .slideHeader {
-    @apply inline-flex mx-3 dark:bg-tPrimary dark:border-tSecondary dark:shadow-tPrimary dark:bg-opacity-70 w-fit self-center  rounded-xl  p-3 shadow-sm shadow-tBlack md:p-6  dark:text-tWhite
+    @apply mx-3 inline-flex w-fit self-center rounded-xl p-3 shadow-sm shadow-tBlack  md:p-6  dark:border-tSecondary dark:bg-tPrimary dark:bg-opacity-70 dark:text-tWhite  dark:shadow-tPrimary;
   }
 
   .slideTitle {
-    @apply p-3 ml-3 text-2xl md:text-5xl lg:text-7xl text-tBlack md:pt-4 flex
+    @apply ml-3 flex p-3 text-2xl text-tBlack md:pt-4 md:text-5xl lg:text-7xl
         dark:text-tWhite;
   }
-
-
 }
 
 .blackHeader {
@@ -237,7 +235,6 @@
   color: theme("colors.tTransition");
   text-shadow: 1px -1px theme("colors.tBlack");
 }
-
 
 .reviewStar {
   color: theme("colors.tWhite");
