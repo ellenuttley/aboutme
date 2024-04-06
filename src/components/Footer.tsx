@@ -14,7 +14,7 @@ const Footer = () => {
  };
 
   return (
-    <footer className=" group fixed bottom-1 left-1 right-1 z-10 flex w-full translate-y-[90%] transform flex-row justify-evenly rounded-md border-2 border-solid bg-tWhite pb-2 pt-2 font-lexend text-tBlack opacity-10 shadow-md shadow-tPrimary transition-transform duration-300 hover:opacity-100 hover:translate-y-0 dark:border-tPrimary dark:bg-tPrimary dark:shadow-tSecondary">
+    <footer className=" group fixed bottom-1 left-5 right-5 z-10 flex w-auto h-fit translate-y-[90%] transform flex-row justify-evenly rounded-md border-2 border-solid bg-tWhite pb-2 pt-2 font-lexend text-tBlack opacity-10 shadow-md shadow-tPrimary transition-transform duration-300 hover:opacity-100 hover:translate-y-0 dark:border-tPrimary dark:bg-tPrimary dark:shadow-tSecondary">
       <a
         href="https://github.com/ellenuttley/aboutme"
         target="_blank"
