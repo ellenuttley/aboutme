@@ -5,7 +5,6 @@ import QuoteBox from "@/components/QuoteBox";
 import TitleBox from "@/components/TitleBox";
 import ColorPalette from "@/components/ColourPalette";
 import { FiGithub } from "react-icons/fi";
-import BeforeAfters from "@/components/BeforeAfters";
 import ReviewBox from "@/components/ReviewBox";
 
 
@@ -56,8 +55,8 @@ const AboutYou = () => {
             itched at my brain for a long time.
           </p>
           <p>
-            This is a palette generator I made that converts the 'primary'
-            colour into individual 'red', 'green', and 'blue' variables.
+            This is a palette generator I made that converts the &#39;primary&#39;
+            colour into individual &#39;red&#39;, &#39;green&#39;, and &#39;blue&#39; variables.
           </p>
           <p>
             The palette is then generated, with algorithms that are designed to
@@ -107,8 +106,8 @@ const AboutYou = () => {
         </p>
         <p>
           I am an entertainer at heart, and this leaks into the way I conduct my
-          training sessions. I know that if my trainees aren't engaged, they
-          aren't listening - and if they aren't listening, they can't learn.
+          training sessions. I know that if my trainees aren&#39;t engaged, they
+          aren&#39;t listening - and if they aren&#39;t listening, they can&#39;t learn.
         </p>
       </div>
 
@@ -138,9 +137,9 @@ const AboutYou = () => {
           My years in writing spaces have equipt me to build what my client wants, and I pride myself in being able to run with my clients vision.
         </p>
       </div>
-      <div className="col-span-4">
-        <BeforeAfters />
-      </div>
+      {/* <div className="col-span-4">
+ 
+      </div> */}
 
       {/* <QuoteBox quote="Create new components and templates" />
       <TitleBox title="Create new components and templates" />
