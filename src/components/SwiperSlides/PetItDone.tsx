@@ -15,31 +15,48 @@ const PetItDone = () => {
 
   return (
     <div className="slideBody font-irene">
-      <div className="shadow-bardBlack inline-flex w-full justify-center rounded-xl bg-[#B0E3EE] p-3 shadow-sm lg:p-6 dark:bg-transparent dark:shadow-none">
+      <div className="slideHeader bg-[#B0E3EE]">
         <a
           href="https://github.com/ellenuttley/pet-it-done"
           onMouseEnter={() => handleMouseEnter("petitdoneAx")}
           onMouseLeave={handleMouseLeave}
         >
           <img
-            className="h-12 w-auto flex-shrink md:h-32"
+            className="max-h-16 flex-shrink md:max-h-20 lg:max-h-24"
             src="/petitdoneAx.png"
             alt="Pet It Done Axolotl"
           />
-          {activeTooltip === "petitdoneAx" && (
-            <p className="font-irene shadow-bardBlack rounded-xl bg-tPrimary p-2 px-3 text-tWhite shadow-sm">
-              Click me to view the GitHub!
-            </p>
-          )}
+          <span
+            className={`swiper-tooltip -translate-x-32  ${activeTooltip === "petitdoneAx" ? "scale-100" : "scale-0"}`}
+          >
+            Click me to view the GitHub!
+          </span>
         </a>
-        <img
-          className="h-12 w-auto flex-shrink md:h-32 dark:rounded-full dark:bg-gradient-to-b dark:from-transparent dark:via-tPrimary"
-          src="/petitdoneLogo.png"
-          alt="Pet It Done Logo"
-        />
+        <h1 className="slideTitle font-irene flex-grow self-center normal-case">
+          PetItDone{" "}
+        </h1>
       </div>
 
-      <p className="slideBody dark:bg-transparent">
+      {/* <div className="dark:bg-darkPrimary  dark:border-secondary dark:shadow-primary grid w-full grid-cols-3 justify-center rounded-xl bg-[#BBAFD3] p-3 shadow-sm shadow-tBlack md:p-6 dark:bg-opacity-70 dark:text-tWhite">
+
+          <img
+            className="col-span-1 h-auto w-auto flex-shrink justify-normal self-center"
+            src="/bardLogo.png"
+            alt="Bedtime Bard Logo"
+          />
+          <span
+            className={`swiper-tooltip  ${activeTooltip === "bardLogo" ? "scale-100" : "scale-0"}`}
+          >
+            Click me to view the GitHub!
+          </span>
+        </a>
+
+        <h1 className="slideTitle col-span-2 self-center font-bungee">
+          BEDTIME BARD{" "}
+        </h1>
+      </div> */}
+
+      <p className="slideBody font-irene dark:bg-transparent">
         PetItDone is a React Native app that combines a digipet and to-do list.
         Designed by neurodivergent people, with neurodivergent people in mind,
         in hopes that the urgency of the digipet getting sad, will give a boost
@@ -47,8 +64,7 @@ const PetItDone = () => {
       </p>
 
       <p className="slideBody shadow-bardBlack mb-6 rounded-xl bg-[#FFCAD4] p-6 shadow-sm">
-        To learn more about PetItDone, feel free to click through the
-        presentation below!
+        I got 100% for this presentation, too :)
       </p>
 
       <div
@@ -80,7 +96,7 @@ const PetItDone = () => {
           title="PetItDone Presentation"
         ></iframe>
       </div>
-
+      {/* 
       <p className="slideBody shadow-bardBlack mb-6 rounded-xl bg-[#FAF2A2] p-6 shadow-sm">
         Click the image below to view the wireframes and user story
       </p>
@@ -117,7 +133,7 @@ const PetItDone = () => {
           allow="fullscreen"
           title="PetItDone Wireframes"
         ></iframe>
-      </a>
+      </a> */}
     </div>
   );
 };

@@ -1,6 +1,8 @@
 'use client'
 
 import React, { useState } from "react";
+import { BsEmojiSunglasses } from "react-icons/bs";
+
 
 const BedtimeBard = () => {
   const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
@@ -14,26 +16,28 @@ const BedtimeBard = () => {
   };
 
   return (
-    <div className="slideBody font-solway">
-      <div className="grid grid-cols-3 dark:bg-darkPrimary dark:border-secondary dark:shadow-primary w-full justify-center rounded-xl bg-[#BBAFD3] p-3 shadow-sm shadow-tBlack lg:p-6 dark:bg-opacity-70 dark:text-tWhite">
+    <div className="slideBody font-solway ">
+      <div className="slideHeader content-center  justify-evenly bg-[#BBAFD3]">
         <a
           href="https://github.com/ellenuttley/bedtime-bard"
           onMouseEnter={() => handleMouseEnter("bardLogo")}
           onMouseLeave={handleMouseLeave}
         >
           <img
-            className="h-auto w-auto flex-shrink justify-normal self-center col-span-1"
+            className="flex max-h-16 md:max-h-20 lg:max-h-24"
             src="/bardLogo.png"
             alt="Bedtime Bard Logo"
           />
           <span
-            className={`swiper-tooltip  ${activeTooltip === "bardLogo" ? "scale-100" : "scale-0"}`}
+            className={`swiper-tooltip -translate-x-32  ${activeTooltip === "bardLogo" ? "scale-100" : "scale-0"}`}
           >
             Click me to view the GitHub!
           </span>
         </a>
 
-        <h1 className="slideTitle font-bungee self-center col-span-2">BEDTIME BARD </h1>
+        <h1 className="slideTitle flex self-center font-bungee">
+          BEDTIME BARD{" "}
+        </h1>
       </div>
       <p className="slideBody font-solway dark:bg-transparent ">
         Bedtime Bard is a Flask built web app that uses the OpenAI API to take
@@ -43,10 +47,26 @@ const BedtimeBard = () => {
         their teeth!{" "}
       </p>
 
-      <p className="slideBody font-solway shadow-bardBlack mb-6 rounded-xl bg-[#9DC3CC] p-6 shadow-sm">
-        To learn more about BedtimeBard, feel free to click through the
-        presentation below!
-      </p>
+      <div className="slideBody shadow-bardBlack mb-6 space-y-1 rounded-xl bg-[#9DC3CC] p-6 font-solway shadow-sm">
+        <p>
+          This project was made as part of the Software Engineering{" "}
+          <a
+            href="https://codefirstgirls.com/courses/cfgdegree/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CFGDegree
+          </a>
+        </p>
+        <p>
+          Check out my presentation below for more information - it got 100%
+          {"  "}
+          <span className="inline-block text-tGrey/50">
+            {"  "}
+            <BsEmojiSunglasses />
+          </span>
+        </p>
+      </div>
 
       <div
         className="shadow-bardBlack relative h-auto w-full rounded-xl shadow-sm "
@@ -77,7 +97,7 @@ const BedtimeBard = () => {
           title="Bedtime Bard Presentation"
         ></iframe>
       </div>
-
+      {/* 
       <p className="slideBody font-solway shadow-bardBlack mb-6 rounded-xl bg-[#E7B1F6] p-6 shadow-sm">
         Click the image below to view the wireframes and user story
       </p>
@@ -114,7 +134,7 @@ const BedtimeBard = () => {
           allow="fullscreen"
           title="BedtimeBard Wireframes"
         ></iframe>
-      </a>
+      </a> */}
     </div>
   );
 };
